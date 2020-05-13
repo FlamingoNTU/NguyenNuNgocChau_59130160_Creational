@@ -11,12 +11,14 @@ package bt2;
  */
 public class Main {
     public static void main(String[] args) {
-        MyStringBuilder myString = new MyStringBuilder.StringBuilder()
-                .addString("Kiểm tra kết quả xét tuyển vào Đại học Nha Trang với số điểm: ")
-                .addFloat((float) 18.5)
-                .addString(" Kết quả: ")
+        MyStringBuilder string = new MyStringBuilder.Builder()
+                .addString("Kiểm tra tính đúng, sai của biểu thức so sánh dưới đây: \n")
+                .addFloat((float) 3.5)
+                .addString(" >= ")
+                .addFloat((float) 7.0)
+                .addString("\nKết quả là: ")
                 .addBool(Boolean.FALSE)
                 .build();
-        System.out.println(myString.toString());
+        System.out.println(string.toString());
     }
 }

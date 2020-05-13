@@ -16,11 +16,12 @@ public class Main {
 
     /**
      * @param args the command line arguments
+     * @throws java.text.ParseException
      */
     public static void main(String[] args) throws ParseException {
         // TODO code application logic here
         CTHD sp1 = new CTHD("Trà sữa", 10, 10000, (float) 1.2);
-        CTHD sp2 = new CTHD("Bánh tráng trộn", 20, 15000, (float) 0.8);
+        CTHD sp2 = new CTHD("Pizza", 20, 15000, (float) 0.8);
         CTHD sp3 = new CTHD("Gà rán", 5, 50000, (float) 1.1);
         
         HoaDon hd1 = new HoaDon.Builder()

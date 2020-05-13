@@ -11,7 +11,8 @@ package bt1;
  */
 public class CTHD {
     String tenSP;
-    int soLuong, donGia;
+    int soLuong;
+    double donGia;
     float chietKhau;
 
     public CTHD(String tenSP, int soLuong, int donGia, float chietKhau) {
@@ -37,11 +38,11 @@ public class CTHD {
         this.soLuong = soLuong;
     }
 
-    public int getDonGia() {
+    public double getDonGia() {
         return donGia;
     }
 
-    public void setDonGia(int donGia) {
+    public void setDonGia(double donGia) {
         this.donGia = donGia;
     }
 
@@ -52,4 +53,5 @@ public class CTHD {
     public void setChietKhau(float chietKhau) {
         this.chietKhau = chietKhau;
     }            
+
 }

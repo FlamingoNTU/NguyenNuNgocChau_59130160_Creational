@@ -10,17 +10,24 @@ package bt3;
  * @author Admin
  */
 public class Triangle extends Shape{
-
+    
+    private static Triangle instance;
+        
+    public static Triangle createInstance(){
+        if(instance == null){
+            instance = new Triangle();
+        }
+        return instance;
+    }
+    
     public Triangle() {
-        System.out.println("Các dụng cụ để vẽ hình tam giác: \n");
     }
     
     @Override
     public String draw() {
-        brush = "- Bút chì vẽ loại 1" + "\n";
-        paper = "- Giấy A4" + "\n";
-        frame = "- Khung vẽ cỡ lớn" + "\n";
-        return brush + paper + frame;
-    }          
-    
+        brush = "trải";
+        paper = "giấy";
+        frame = "vào khung";
+        return this.getBrush() + this.getPaper() + this.getFrame() + "hình tam giác";
+    }              
 }

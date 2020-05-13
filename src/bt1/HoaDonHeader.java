@@ -47,6 +47,5 @@ public class HoaDonHeader {
     public void setNgayBan(Date ngayBan) {
         this.ngayBan = ngayBan;
     }
-    
-    
+
 }

@@ -11,16 +11,23 @@ package bt3;
  */
 public class Circle extends Shape{
 
+    private static Circle instance;
+        
+    public static Circle createInstance(){
+        if(instance == null){
+            instance = new Circle();
+        }
+        return instance;
+    }
+    
     public Circle() {
-        System.out.println("Các dụng cụ để vẽ hình tròn: \n");
     }
     
     @Override
     public String draw() {
-        brush = "- Bút chì vẽ loại 2" + "\n";
-        paper = "- Giấy A3" + "\n";
-        frame = "- Khung vẽ cỡ trung bình" + "\n";
-        return brush + paper + frame;
-    }         
-    
+        brush = "trải";
+        paper = "giấy";
+        frame = "vào khung";
+        return this.getBrush() + this.getPaper() + this.getFrame() + "hình tròn";
+    }             
 }

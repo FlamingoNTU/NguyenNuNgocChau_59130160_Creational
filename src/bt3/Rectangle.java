@@ -11,15 +11,23 @@ package bt3;
  */
 public class Rectangle extends Shape{
 
-    public Rectangle() {
-        System.out.println("Các dụng cụ để vẽ hình chữ nhật: \n");
+    private static Rectangle instance;
+        
+    public static Rectangle createInstance(){
+        if(instance == null){
+            instance = new Rectangle();
+        }
+        return instance;
     }
+
+    public Rectangle() {
+    }        
     
     @Override
-    public String draw() {
-        brush = "- Bút chì vẽ loại 3" + "\n";
-        paper = "- Giấy A2" + "\n";
-        frame = "- Khung vẽ cỡ nhỏ" + "\n";
-        return brush + paper + frame;
+    public String draw() {      
+        brush = "trải";
+        paper = "giấy";
+        frame = "vào khung";
+        return this.getBrush() + this.getPaper() + this.getFrame() + "hình chữ nhật";
     }        
 }

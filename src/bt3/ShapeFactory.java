@@ -10,19 +10,12 @@ package bt3;
  * @author Admin
  */
 public class ShapeFactory {
-    public static ShapeFactory instance;
-    
-    public static ShapeFactory createInstance(){
-        if(instance == null)
-            instance = new ShapeFactory();
-        return instance;
-    }
     
     public Shape createShape(ShapeType shapeType){
         switch(shapeType){
-            case Rectangle: return new Rectangle();
-            case Triangle: return new Triangle();
-            case Circle: return new Circle();
+            case Rectangle: return Rectangle.createInstance();
+            case Triangle: return Triangle.createInstance();
+            case Circle: return Circle.createInstance();
         }
         return null;
      }

@@ -17,28 +17,28 @@ public class MyStringBuilder {
         return str;
     }     
 
-    protected MyStringBuilder(StringBuilder stringbuilder) {
-        this.str = stringbuilder.str;        
+    protected MyStringBuilder(Builder builder) {
+        this.str = builder.str;        
     }
     
-    public static class StringBuilder{
+    public static class Builder{
         String str = "";
 
-        public StringBuilder() {
-        }        
+        public Builder() {
+        }                
         
-        public StringBuilder addString(String s){
+        public Builder addString(String s){
             this.str += s;
             return this;
         }
         
-        public StringBuilder addFloat(float f){
-            this.str += f;
+        public Builder addFloat(float f){
+            this.str += String.valueOf(f);
             return this;
         }
         
-        public StringBuilder addBool(boolean b){
-            this.str += b;
+        public Builder addBool(boolean b){
+            this.str += String.valueOf(b);
             return this;
         }
         

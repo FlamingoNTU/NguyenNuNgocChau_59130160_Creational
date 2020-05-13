@@ -11,15 +11,47 @@ package bt3;
  */
 public class Main {
     public static void main(String[] args){
-        ShapeFactory shapefac1 = ShapeFactory.createInstance();        
+        ShapeFactory factory = new ShapeFactory();
         
-        Shape shape1 = shapefac1.createShape(ShapeType.Triangle);
-        System.out.println(shape1.draw());
+        Shape rectangle1 = factory.createShape(ShapeType.Rectangle);
+        rectangle1.setBrush("Trải");
+        rectangle1.setPaper(" giấy");
+        rectangle1.setFrame(" vào khung ");
+        System.out.println(rectangle1.draw());
         
-        Shape shape2 = shapefac1.createShape(ShapeType.Circle);                
-        System.out.println(shape2.draw());
+        Shape rectangle2 = factory.createShape(ShapeType.Rectangle);
+        rectangle2.setBrush("Trải");
+        rectangle2.setPaper(" giấy");
+        rectangle2.setFrame(" vào khung ");
+        System.out.println(rectangle1.draw());
+        System.out.println(rectangle2.draw());
+        System.out.println("-------------------------------------");
+
+        Shape triangle1 = factory.createShape(ShapeType.Triangle);
+        triangle1.setBrush("Trải");
+        triangle1.setPaper(" giấy");
+        triangle1.setFrame(" vào khung ");
+        System.out.println(triangle1.draw());
         
-        Shape shape3 = shapefac1.createShape(ShapeType.Rectangle);
-        System.out.println(shape3.draw());                
+        Shape triangle2 = factory.createShape(ShapeType.Triangle);
+        triangle2.setBrush("Trải");
+        triangle2.setPaper(" giấy");
+        triangle2.setFrame(" vào khung ");
+        System.out.println(triangle1.draw());
+        System.out.println(triangle2.draw());
+        System.out.println("-------------------------------------");
+        
+        Shape circle1 = factory.createShape(ShapeType.Circle);
+        circle1.setBrush("Trải");
+        circle1.setPaper(" giấy");
+        circle1.setFrame(" vào khung ");
+        System.out.println(circle1.draw());
+        
+        Shape circle2 = factory.createShape(ShapeType.Circle);
+        circle2.setBrush("Trải");
+        circle2.setPaper(" giấy");
+        circle2.setFrame(" vào khung ");
+        System.out.println(circle1.draw());
+        System.out.println(circle2.draw());
     }
 }
